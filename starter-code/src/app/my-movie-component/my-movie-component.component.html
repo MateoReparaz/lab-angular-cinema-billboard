@@ -1,15 +1,17 @@
-
-<div class="contenedor">
-  <ul class="ul">
-    <li>{{movie.title}}</li>
-    <li>{{movie.sinopsis}}</li>
-    <li>{{movie.generes}}</li>
-    <li>{{movie.year}}</li>
-    <img [src]="movie.poster" alt="poster">
-    <li>{{movie.director}}</li>
-    <li>{{movie.actors}}</li>
-    <li>{{movie.hours}}</li>
-    <li>{{movie.room}}</li>
-    <li><a [routerLink]="['/home']">Home</a></li>
+<div>
+  <ul class="info">
+    <div class="first">
+      <h3>Room {{movie.room}} - {{movie.title}}</h3>
+      <img [src]="movie.poster" alt="poster">
+    </div>
+    <div class="second">
+      <li> <b>Genres</b> {{movie.genres}}</li>
+      <li><b>Year</b> {{movie.year}}</li>
+      <li><b>Director</b> {{movie.director}}</li>
+      <li><b>Cast</b> {{movie.actors}}</li>
+      <li><b>Schedule</b> {{movie.hours}}</li>
+      <li><h4>Synopsis</h4>{{movie.synopsis}}</li>
+      <a [routerLink]="['/home']" id="buttons" class="btn blue">Home</a>
+    </div>
   </ul>
 </div>
