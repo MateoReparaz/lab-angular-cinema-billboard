@@ -1,0 +1,10 @@
+<h2>My Movies</h2>
+
+<div class="contenedor">
+  <ul *ngFor="let movie of movies" class="ul">
+    <li>ROOM: {{movie.room}}</li>
+    <img [src]="movie.poster" alt="poster">
+    <li>{{movie.title}}</li>
+    <li><a [routerLink]="['/movie',movie.id]">Info</a></li>
+  </ul>
+</div>
